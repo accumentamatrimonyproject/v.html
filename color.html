@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Information</title>
+    <link href="bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f1f1f1;
+        }
+        .card {
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .form-check-label {
+            font-size: 1rem;
+        }
+        .btn-next,
+        .btn-previous {
+            background-color: #ff6666;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-right: 10px;
+            transition: background-color 0.3s ease;
+        }
+        .btn-next:hover,
+        .btn-previous:hover {
+            background-color: #ff4d4d;
+        }
+        /* Add colorful styling */
+        .form-label {
+            color: #333;
+        }
+        .form-select {
+            background-color: #f8f9fa;
+            border-color: #ced4da;
+            color: #495057;
+        }
+        .form-check-input:checked {
+            background-color: #ff6666;
+            border-color: #ff6666;
+        }
+       
+        /* Add colorful backgrounds */
+        .card-body {
+            background-color: #ffffff;
+            border-radius: 15px;
+            padding: 20px;
+            border: 1px solid #ced4da;
+        }
+        .container {
+            background: linear-gradient(to bottom right, rgba(240, 147, 251, 1), rgba(245, 87, 108, 1));
+            border-radius: 15px;
+            padding: 30px;
+        }
+        .btn-next:hover,
+.btn-previous:hover,
+#btnNext:hover {
+    background-color: #ff3333;
+    transition: background-color 0.3s ease;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow">
+                    <div class="card-body p-5">
+                        <h3 class="mb-4">Basic Personal Information</h3>
+                        <form>
+                            <div class="mb-3">
+                                <label for="marital-status" class="form-label" id="maritalstatus">Marital Status</label>
+                                <div class="form-check">
+                                   
+            <input type="radio" id="single" name="marital-status" value="Single">
+            <label for="single">Single</label><br>
+            <input type="radio" id="married" name="marital-status" value="Married">
+            <label for="married">Married</label><br>
+            <input type="radio" id="divorced" name="marital-status" value="Divorced">
+            <label for="divorced">Divorced</label><br>
+            <input type="radio" id="widowed" name="marital-status" value="Widowed">
+            <label for="widowed">Widowed</label><br>
+            <br>
+                                </div>
+                                <!-- Add more radio buttons -->
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-4 pb-2">
+                                    <div data-mdb-input-init class="form-outline">               
+                                        <label for="feet" id="feet">Feet</label> <br>
+                                <select id="feet" name="feet">
+                                    <option value="feet">feet</option>
+                                <option value="3">3 feet</option>
+                                <option value="4">4 feet</option>
+                                <option value="5">5 feet</option>
+                                <option value="6">6 feet</option>
+                                <option value="7">7 feet</option>
+                            </select>
+                            <label for="inches">Inches:</label>
+                            <select id="inches" name="inches">
+                                <option value="Inches">Inches</option>
+                                <option value="0">0 inches</option>
+                                <option value="1">1 inch</option>
+                                <option value="2">2 inches</option>
+                                <option value="3">3 inches</option>
+                                <option value="4">4 inches</option>
+                                <option value="5">5 inches</option>
+                                <option value="6">6 inches</option>
+                                <option value="7">7 inches</option>
+                                <option value="8">8 inches</option>
+                                <option value="9">9 inches</option>
+                                <option value="10">10 inches</option>
+                                <option value="11">11 inches</option>
+                            </select>
+                                    </div>
+                                   
+                    
+                                  </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="family-status" class="form-label" id="familystatus">Family Status</label>
+                                <select class="form-select" id="family-status">
+                                    <option selected>Choose...</option>
+                                    <option value="LowIncome">LowIncome</option>
+                                    <option value="Middle Income">middle-income</option>
+                                    <option value="high-income">high-income</option>
+                                    <option value="Nuclear Family">Nuclear Family</option>
+                                    <option value="Educated">Educated</option>
+                                    <option value="culturally-diverse">culturally-diverse</option>
+                                    <option value="Traditional">Traditional</option>
+                                    <!-- Add options -->
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="family-type" class="form-label" id="familytype">Family Type</label>
+                                <select class="form-select" id="familytype">
+                                    <option selected>Choose...</option>
+                                    <!-- Add options -->
+                                    <option value="Nuclear Family">Nuclear Family</option>
+                                   
+                                    <option value="Extended Family">
+                                   Extended Family</option>
+                                    <option  value="Single-Parent Family">familytype
+                                    Single-Parent Family</option>
+                                    <option value="Blended Family">
+                                    Blended Family</option>
+                                    <option value="Other">
+                                    Other</option>
+                                    <br>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Family Values</label>
+                                <div class="form-check" id="familyvalue">
+                                    <input type="checkbox" id="honesty" name="family-values" value="Honesty">
+                                    <label for="honesty">Honesty</label><br>
+                                    <input type="checkbox" id="respect" name="family-values" value="Respect">
+                                    <label for="respect">Respect</label><br>
+                                    <input type="checkbox" id="loyalty" name="family-values" value="Loyalty">
+                                    <label for="loyalty">Loyalty</label><br>
+                                    <input type="checkbox" id="responsibility" name="family-values" value="Responsibility">
+                                    <label for="responsibility">Responsibility</label><br>
+                                    <input type="checkbox" id="compassion" name="family-values" value="Compassion">
+                                    <label for="compassion">Compassion</label><br>
+                                    <br>
+                                </div>
+                                <!-- Add more checkboxes -->
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" id="Anydisability">Any Disability</label>
+                                <div class="form-check">
+                                    <input type="checkbox" id="physical" name="disabilities" value="Physical Disability">
+                                    <label for="physical">Physical Disability</label><br>
+                                    <input type="checkbox" id="visual" name="disabilities" value="Visual Impairment">
+                                    <label for="visual">Visual Impairment</label><br>
+                                    <input type="checkbox" id="hearing" name="disabilities" value="Hearing Impairment">
+                                    <label for="hearing">Hearing Impairment</label><br>
+                                    <input type="checkbox" id="intellectual" name="disabilities" value="Intellectual Disability">
+                                    <label for="intellectual">Intellectual Disability</label><br>
+                                    <input type="checkbox" id="mental" name="disabilities" value="Mental Health Condition">
+                                    <label for="mental">Mental Health Condition</label><br>
+                                    <br>
+                                <!-- Add more checkboxes -->
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <a href="details1.html" class="btn btn-previous">&laquo; Previous</a>
+                                <button type="button" id="btnNext">Next &raquo;</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+     <script>
+        //  document.getElementById('btnNext').addEventListener('click', function(event) {
+        //     event.preventDefault();
+
+        //     // Get form data
+        //     const formData = {
+        //         maritalstatus: document.getElementById('maritalstatus').value,
+        //         feet: document.getElementById('feet').value,
+        //         familystatus: document.getElementById('familystatus').value,
+        //        familytype: document.getElementById('familytype').value,
+        //        familyvalues: document.getElementById('familyvalues').value,
+        //       Anydisability : document.getElementById('Anydisability').value
+              
+        //         // Add other form fields as needed
+        //     };
+
+        //     // Store form data in sessionStorage
+        //     sessionStorage.setItem('formDataColor', JSON.stringify(formData));
+
+        //     // Redirect to the next page
+        //     window.location.href = 'Education details.html'; // Replace 'page2.html' with the URL of your next page
+        // });
+        
+        document.getElementById('btnNext').addEventListener('click', function(event) {
+            event.preventDefault();
+
+            // Get form data
+            const formData = {
+                maritalstatus: document.getElementById('maritalstatus').value,
+               feet: document.getElementById('feet').value,
+               familystatus: document.getElementById('familystatus').value,
+               familytype: document.getElementById('familytype').value,           
+                familyvalue: document.getElementById('familyvalue').checked,
+               Anydisability: document.getElementById('Anydisability').value
+            };
+            console.log(formData)
+
+            // Store form data in sessionStorage
+            sessionStorage.setItem('formDataPage2', JSON.stringify(formData));
+
+            // Redirect to the next page
+            window.location.href = 'Education details.html';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Your existing head content here -->
+</head>
+<body>
+    <!-- Your existing HTML content here -->
+    <form id="myForm">
+        <!-- Your form fields here -->
+        <input type="text" id="firstName" name="firstName" placeholder="First Name">
+        <input type="text" id="lastName" name="lastName" placeholder="Last Name">
+        <!-- Other form fields -->
+        <button type="button" id="btnNext" class="btn btn-next">Next &raquo;</button>
+    </form>
+
+    <script>
+        document.getElementById('btnNext').addEventListener('click', function(event) {
+            event.preventDefault();
+
+            // Get form data
+            const formData = {
+                firstName: document.getElementById('firstName').value,
+                lastName: document.getElementById('lastName').value
+                // Add other form fields as needed
+            };
+
+            // Store form data in sessionStorage
+            sessionStorage.setItem('formDataPractice', JSON.stringify(formData));
+
+            // Redirect to the next page
+            window.location.href = 'practice1.html'; // Replace 'page2.html' with the URL of your next page
+        });
+    </script>
+</body>
+</html>

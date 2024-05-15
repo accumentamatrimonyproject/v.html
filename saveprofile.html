@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last Page</title>
+    <link href="bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <!-- Add your CSS file -->
+</head>
+<body>
+    <h1>Last Page</h1>
+    <div id="formDataDisplay">
+        
+    </div>
+    
+    <script>
+        // Retrieve form data from sessionStorage for each page
+        const formDataPage1String = sessionStorage.getItem('formDataPage1');
+        const formDataPage2String = sessionStorage.getItem('formDataPage2');
+        const formDataPage3String = sessionStorage.getItem('formDataPage3'); 
+        
+
+        // Display form data on the final page
+        if (formDataPage1String && formDataPage2String && formDataPage3String) {
+            const formDataPage1 = JSON.parse(formDataPage1String);
+            const formDataPage2 = JSON.parse(formDataPage2String);
+            const formDataPage3 = JSON.parse(formDataPage3String);
+        
+           console.log(formDataPage3)
+            document.getElementById('formDataDisplay').innerHTML = `
+                <h2>Registration Page</h2>
+                <p>First Name: ${formDataPage1.firstName}</p>
+                <p>Last Name: ${formDataPage1.lastName}</p>
+                <p>DateofBirth:${formDataPage1.DateofBirth}</p>
+                <p>Gender:${formDataPage1.Gender}</p>
+                <p>email:${formDataPage1.email}</p>
+                <p>phoneNumber:${formDataPage1.phoneNumber}</p>
+                <p>Caste:${formDataPage1.Caste}</p>
+                <p>subCaste:${formDataPage1.subCaste}</p>
+                <p>Religion:${formDataPage1.Religion}</p>
+                <p>Gothram:${formDataPage1.Gothram}</p>
+                <p>Dosham:${formDataPage1.Dosham}</p>        
+
+                <h2>PersonalInformation:</h2>
+                <p>maritalstatus: ${formDataPage2.maritalstatus}</p>
+                <p>feet: ${formDataPage2.feet}</p>
+                <p>familystatus: ${formDataPage2.familystatus}</p>
+                <p>familytype: ${formDataPage2.familytype}</p>
+                <p>familyvalue: ${formDataPage2.familyvalue}</p>
+                <p> Anydisability: ${formDataPage2.Anydisability}</p>
+                
+                <h2>Educational details:</h2>
+                <p>Qualification: ${formDataPage3.Qualification}</p>
+                <p>  Occupation: ${formDataPage3.Occupation}</p>
+                <p> Employer: ${formDataPage3.Employer}</p>
+                <p>salary: ${formDataPage3.salary}</p>
+                <p> worklocation: ${formDataPage3.worklocation}</p>        
+                <p> state: ${formDataPage3.state}</p>
+                <p>city: ${formDataPage3.city}</p>
+            
+           `; 
+        } else {
+           console.log('Form data not found.');
+     }
+       
+    </script>
+  
+</body>
+
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<link href="bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+<script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<style>
+    .gradient-custom {
+/* fallback for old browsers */
+background: #f093fb;
+
+/* Chrome 10-25, Safari 5.1-6 */
+background: -webkit-linear-gradient(to bottom right, rgba(240, 147, 251, 1), rgba(245, 87, 108, 1));
+
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: linear-gradient(to bottom right, rgba(240, 147, 251, 1), rgba(245, 87, 108, 1))
+}
+
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+font-size: 1rem;
+line-height: 2.15;
+padding-left: .75em;
+padding-right: .75em;
+}
+.card-registration .select-arrow {
+top: 13px;
+}
+.row {
+  margin-top: 15px;
+}
+.btn {
+  margin-right: 15px;
+}
+.btn-next,
+        .btn-previous {
+            background-color: #ff6666;
+            border-color: #ff6666;
+        }
+        .btn-next:hover,
+        .btn-previous:hover {
+            background-color: #ff4d4d;
+            border-color: #ff4d4d;
+        }       
+        .btn-next,
+        .btn-saveprofile {
+            background-color: #ff6666;
+            border-color: #ff6666;
+        }
+        .btn-next:hover,
+        .btn-saveprofile:hover {
+            background-color: #ff4d4d;
+            border-color: #ff4d4d;
+        }       
+</style>
+<body>
+    <section class=" gradient-custom">
+        <div class="container py-5">
+        
+          <div class="row justify-content-center align-items-center">
+            <div class="col-12 col-lg-9 col-xl-7">
+              <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                <div class="card-body p-4 p-md-5">
+                  <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Educational Details</h3>
+                  <form>
+                    <div class="row">
+                        <div class="col-md-6 mb-4 pb-2">
+                            <div data-mdb-input-init class="form-outline">               
+                                <label class="form-label" for="state" id="Qualification">Qualification</label><br>                  
+                                 <select class="select form-control-md">
+                                <option value="1">B.Tech</option>
+                                <option value="2">Law</option>
+                                <option value="3">MSC</option>
+                                <option value="4">BSC</option>
+                              </select>
+                              
+                            </div>
+                        </div>
+            
+                          </div>
+                          <div class="row">
+                          <div class="col-md-6 mb-4 pb-2">
+                            <div data-mdb-input-init class="form-outline">               
+                                <label class="form-label" for="state" id="Occupation">Occupation</label><br>                  
+                                 <select class="select form-control-md">
+                                <option value="1">Construction Worker</option>
+                                <option value="2">Mechanic</option>
+                                <option value="3">Sales Assistance</option>
+                                <option value="4">Architech</option>
+                              </select>
+                              
+                            </div>
+                           
+            
+                          </div>
+                    
+                    </div>
+                    <div class="row">
+                        <div class="w3-container">
+                            <p class="para" id="Employer">Employer In:</p><br>
+                            <input type="radio" id="type1" name="employer-type" value="Startup">
+        <label for="type1">Startup</label><br>
+        <input type="radio" id="type2" name="employer-type" value="Small Business">
+        <label for="type2">Small Business</label><br>
+        <input type="radio" id="type3" name="employer-type" value="Medium Enterprise">
+        <label for="type3">Medium Enterprise</label><br>
+        <input type="radio" id="type4" name="employer-type" value="Large Corporation">
+        <label for="type4">Large Corporation</label><br>
+        <input type="radio" id="type5" name="employer-type" value="Government Organization">
+        <label for="type5">Government Organization</label><br>
+        <br>
+                        </div>
+                        </div>
+                    
+                        <div class="row">
+                            <div class="col-md-6 mb-4 pb-2">
+                            <label class="form-label" for="salary" id="salary">salary</label> <br>
+                            <select id="salary-range" name="salary-range" placeholder="select-range">
+                                <option value="100000-200000">1,00,000 - 2,00,000</option>
+                                <option value="1000000-2000000">10,00,000 - 20,00,000</option>
+                                <option value="2000000-3000000">20,00,001 - 30,00,000</option>
+                                <option value="3000000-4000000">30,00,001 - 40,00,000</option>
+                                <option value="4000000-5000000">40,00,001 - 50,00,000</option>
+                                <option value="5000000-6000000">50,00,001 - 60,00,000</option>
+                                <option value="6000000-7000000">60,00,001 - 70,00,000</option>
+                                <option value="700000-8000000">70,00,001 - 80,00,000</option>
+                                <option value="8000000-9000000">80,00,001 - 90,00,000</option>
+                                <option value="9000000-10000000">90,00,001 - 1,00,00,000</option>
+                                <option value="10000000-200000000">1,00,00,001 - 2,00,00,000</option>
+                                <option value="200000000-30000000">2,00,00,001 - 3,00,00,000</option>
+                                <option value="30000000-40000000">3,00,00,001 - 4,00,00,000</option>
+                                <option value="40000000-50000000">4,00,00,001 - 5,00,00,000</option>
+                                <option value="50000000-60000000">5,00,00,001 - 6,00,00,000</option>
+                                <option value="60000000-70000000">6,00,00,001 - 7,00,00,000</option>
+                                <option value="70000000-80000000">7,00,00,001 - 8,00,00,000</option>
+                                <option value="80000000-90000000">8,00,00,001 - 9,00,00,000</option>
+                                <option value="90000000-100000000">9,00,00,001 - 10,00,00,000</option>
+                            </select>
+                            
+                        </div>
+</div>
+<div class="row">
+                        <div class="col-md-6 mb-4 pb-2">
+                            <div data-mdb-input-init class="form-outline">               
+                               
+                               
+                                      
+                                <label for="work-location" id="worklocation">work location:</label><br>
+                                
+                                <select id="worklocation" name="work-location">
+                                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                    <option value="Assam">Assam</option>
+                                    <option value="Bihar">Bihar</option>
+                                    <option value="Chhattisgarh">Chhattisgarh</option>
+                                    <option value="Goa">Goa</option>
+                                    <option value="Gujarat">Gujarat</option>
+                                    <option value="Haryana">Haryana</option>
+                                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                    <option value="Jharkhand">Jharkhand</option>
+                                    <option value="Karnataka">Karnataka</option>
+                                    <option value="Kerala">Kerala</option>
+                                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                    <option value="Maharashtra">Maharashtra</option>
+                                    <option value="Manipur">Manipur</option>
+                                    <option value="Meghalaya">Meghalaya</option>
+                                    <option value="Mizoram">Mizoram</option>
+                                    <option value="Nagaland">Nagaland</option>
+                                    <option value="Odisha">Odisha</option>
+                                    <option value="Punjab">Punjab</option>
+                                    <option value="Rajasthan">Rajasthan</option>
+                                    <option value="Sikkim">Sikkim</option>
+                                    <option value="Tamil Nadu">Tamil Nadu</option>
+                                    <option value="Telangana">Telangana</option>
+                                    <option value="Tripura">Tripura</option>
+                                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                    <option value="Uttarakhand">Uttarakhand</option>
+                                    <option value="West Bengal">West Bengal</option>
+                                    <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                    <option value="Chandigarh">Chandigarh</option>
+                                    <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+                                    <option value="Daman and Diu">Daman and Diu</option>
+                                    <option value="Delhi">Delhi</option>
+                                    <option value="Lakshadweep">Lakshadweep</option>
+                                    <option value="Puducherry">Puducherry</option>
+                                </select>
+                                <br>
+                            </div>
+                           
+          </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6 mb-4 pb-2">
+                                <div data-mdb-input-init class="form-outline">               
+                                    <label class="form-label" for="state" id="state">State</label><br>                  
+                                    <select id="work-location" name="work-location">
+                                        <optgroup label="Andhra Pradesh">
+                                            <option value="Hyderabad">Hyderabad</option>
+                                            <option value="Visakhapatnam">Visakhapatnam</option>
+                                            <option value="Vijayawada">Vijayawada</option>
+                                            <option value="Guntur">Guntur</option>
+                                            <option value="Nellore">Nellore</option>
+                                        </optgroup>
+                                        <optgroup label="Arunachal Pradesh">
+                                            <option value="Itanagar">Itanagar</option>
+                                            <option value="Naharlagun">Naharlagun</option>
+                                        </optgroup>
+                                  </select>
+                                </div>
+                               </div>
+                
+                              </div>
+                              <div class="row">
+                              <div class="col-md-6 mb-4 pb-2">
+                                <div data-mdb-input-init class="form-outline">               
+                                    <label class="form-label" for="city" id="city">city</label><br>                  
+                                    <select id="work-location" name="work-location">
+                                        <optgroup label="Andhra Pradesh">
+                                            <option value="Hyderabad">Hyderabad</option>
+                                            <option value="Visakhapatnam">Visakhapatnam</option>
+                                            <option value="Vijayawada">Vijayawada</option>
+                                            <option value="Guntur">Guntur</option>
+                                            <option value="Nellore">Nellore</option>
+                                        </optgroup>
+                                        <optgroup label="Assam">
+                                            <option value="Guwahati">Guwahati</option>
+                                            <option value="Silchar">Silchar</option>
+                                            <option value="Dibrugarh">Dibrugarh</option>
+                                            <option value="Jorhat">Jorhat</option>
+                                        </optgroup>
+                                        <optgroup label="Bihar">
+                                            <option value="Patna">Patna</option>
+                                            <option value="Gaya">Gaya</option>
+                                            <option value="Bhagalpur">Bhagalpur</option>
+                                            <option value="Muzaffarpur">Muzaffarpur</option>
+                                        </optgroup>
+                                        <optgroup label="Delhi">
+                                            <option value="New Delhi">New Delhi</option>
+                                            <option value="Noida">Noida</option>
+                                            <option value="Gurgaon">Gurgaon</option>
+                                            <option value="Faridabad">Faridabad</option>
+                                        </optgroup>
+                                        <optgroup label="Gujarat">
+                                            <option value="Ahmedabad">Ahmedabad</option>
+                                            <option value="Surat">Surat</option>
+                                            <option value="Vadodara">Vadodara</option>
+                                            <option value="Rajkot">Rajkot</option>
+                                        </optgroup>
+                                        <optgroup label="Haryana">
+                                            <option value="Chandigarh">Chandigarh</option>
+                                            <option value="Faridabad">Faridabad</option>
+                                            <option value="Gurgaon">Gurgaon</option>
+                                            <option value="Panipat">Panipat</option>
+                                        </optgroup>
+                                        <optgroup label="Karnataka">
+                                            <option value="Bangalore">Bangalore</option>
+                                            <option value="Mysore">Mysore</option>
+                                            <option value="Mangalore">Mangalore</option>
+                                            <option value="Hubli">Hubli</option>
+                                        </optgroup>
+                                        <optgroup label="Kerala">
+                                            <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+                                            <option value="Kochi">Kochi</option>
+                                            <option value="Kozhikode">Kozhikode</option>
+                                            <option value="Thrissur">Thrissur</option>
+                                        </optgroup>
+                                        <optgroup label="Maharashtra">
+                                            <option value="Mumbai">Mumbai</option>
+                                            <option value="Pune">Pune</option>
+                                            <option value="Nagpur">Nagpur</option>
+                                            <option value="Nashik">Nashik</option>
+                                        </optgroup>
+                                        <optgroup label="Tamil Nadu">
+                                            <option value="Chennai">Chennai</option>
+                                            <option value="Coimbatore">Coimbatore</option>
+                                            <option value="Madurai">Madurai</option>
+                                            <option value="Tiruchirappalli">Tiruchirappalli</option>
+                                        </optgroup>
+                                        <optgroup label="Telangana">
+                                            <option value="Hyderabad">Hyderabad</option>
+                                            <option value="Warangal">Warangal</option>
+                                            <option value="Nizamabad">Nizamabad</option>
+                                            <option value="Karimnagar">Karimnagar</option>
+                                        </optgroup>
+                                        <optgroup label="Uttar Pradesh">
+                                            <option value="Lucknow">Lucknow</option>
+                                            <option value="Kanpur">Kanpur</option>
+                                            <option value="Ghaziabad">Ghaziabad</option>
+                                            <option value="Agra">Agra</option>
+                                        </optgroup>
+                                        <optgroup label="West Bengal">
+                                            <option value="Kolkata">Kolkata</option>
+                                            <option value="Howrah">Howrah</option>
+                                            <option value="Durgapur">Durgapur</option>
+                                            <option value="Asansol">Asansol</option>
+                                        </optgroup>
+                                        </select>
+                                  
+                                </div>                            
+                
+                              </div>
+                             
+                                <div class="d-flex justify-content-end">
+                                    <a href="color.html" class="btn btn-previous">&laquo; Previous</a>
+                                    <button type="button" id="btnNext">submit &raquo;</button>
+                                </div>
+                              </div>
+                              </div>
+                        </form>
+                    </body>
+                   <script>
+                    
+        document.getElementById('btnNext').addEventListener('click', function(event) {
+            event.preventDefault();
+
+            // Get form data
+            const formData = {
+               Qualification: document.getElementById('Qualification').value,
+              Occupation: document.getElementById('Occupation').value,
+              Employer: document.getElementById('Employer').value,
+              salary:document.getElementById('salary').value,
+               worklocation: document.getElementById('worklocation').value,
+              state: document.getElementById('state').value,
+                city: document.getElementById('city').value
+                // Add other form fields as needed
+            };
+
+                       // Store form data in sessionStorage
+            sessionStorage.setItem('formDataPage3', JSON.stringify(formData));
+
+            // Redirect to the next page
+            window.location.href = 'saveprofile.html'; // Replace 'page2.html' with the URL of your next page
+        });
+       
+    </script>
+
+                

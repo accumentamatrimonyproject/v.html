@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Information</title>
+    <link href="bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #f8f9fa;
+        }
+        .card {
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .form-check-label {
+            font-size: 1rem;
+        }
+        .btn-next,
+        .btn-previous {
+            background-color: #0d6efd;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+        .btn-next:hover,
+        .btn-previous:hover {
+            background-color: #0b5ed7;
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow">
+                    <div class="card-body p-4">
+                        <h3 class="mb-4">Basic Personal Information</h3>
+                        <form>
+                            <div class="mb-3">
+                                <label for="marital-status" class="form-label">Marital Status</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="marital-status" id="single" value="Single">
+                                    <label class="form-check-label" for="single">Single</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="marital-status" id="married" value="Married">
+                                    <label class="form-check-label" for="married">Married</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="marital-status" id="divorced" value="Divorced">
+                                    <label class="form-check-label" for="divorced">Divorced</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="marital-status" id="widowed" value="Widowed">
+                                    <label class="form-check-label" for="widowed">Widowed</label>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Height</label>
+                                <div class="row">
+                                    <div class="col">
+                                        <select class="form-select" aria-label="Feet">
+                                            <option selected>Feet</option>
+                                            <option value="3">3 feet</option>
+                                            <option value="4">4 feet</option>
+                                            <option value="5">5 feet</option>
+                                            <option value="6">6 feet</option>
+                                            <option value="7">7 feet</option>
+                                        </select>
+                                    </div>
+                                    <div class="col">
+                                        <select class="form-select" aria-label="Inches">
+                                            <option selected>Inches</option>
+                                            <option value="0">0 inches</option>
+                                            <option value="1">1 inch</option>
+                                            <option value="2">2 inches</option>
+                                            <option value="3">3 inches</option>
+                                            <option value="4">4 inches</option>
+                                            <option value="5">5 inches</option>
+                                            <option value="6">6 inches</option>
+                                            <option value="7">7 inches</option>
+                                            <option value="8">8 inches</option>
+                                            <option value="9">9 inches</option>
+                                            <option value="10">10 inches</option>
+                                            <option value="11">11 inches</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="family-status" class="form-label">Family Status</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="family-status" id="low-income" value="Low Income">
+                                    <label class="form-check-label" for="low-income">Low Income</label>
+                                </div>
+                                <!-- Add more options -->
+                            </div>
+                            <div class="mb-3">
+                                <label for="family-type" class="form-label">Family Type</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="family-type" id="nuclear" value="Nuclear Family">
+                                    <label class="form-check-label" for="nuclear">Nuclear Family</label>
+                                </div>
+                                <!-- Add more options -->
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Family Values</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Honesty" id="honesty">
+                                    <label class="form-check-label" for="honesty">Honesty</label>
+                                </div>
+                                <!-- Add more checkboxes -->
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Any Disability</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Physical Disability" id="physical">
+                                    <label class="form-check-label" for="physical">Physical Disability</label>
+                                </div>
+                                <!-- Add more checkboxes -->
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <a href="#" class="btn btn-previous">&laquo; Previous</a>
+                                <a href="education-details.html" class="btn btn-next">Next &raquo;</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</body>
+</html>

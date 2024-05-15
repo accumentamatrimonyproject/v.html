@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Your existing head content here -->
+</head>
+<body>
+    <!-- Your existing HTML content here -->
+    <h1>Final Page</h1>
+    <div id="formDataDisplay"></div>
+
+    <script>
+        // Retrieve form data from sessionStorage for each page
+        const formDataPracticeString = sessionStorage.getItem('formDataPractice');
+        const formDataPractice1String = sessionStorage.getItem('formDataPractice1');
+        
+
+        // Display form data on the final page
+        if (formDataPracticeString && formDataPractice1String) {
+            const formDataPractice = JSON.parse(formDataPracticeString);
+            const formDataPractice1 = JSON.parse(formDataPractice1String);
+            
+
+            // Customize how you want to display the form data
+            document.getElementById('formDataDisplay').innerHTML = `
+                <h2>Data from Page 1:</h2>
+                <p>First Name: ${formDataPractice.firstName}</p>
+                <p>Last Name: ${formDataPractice1.lastName}</p>
+                <h2>Data from Page 2:</h2>
+                <!-- Display data from other pages -->
+                <h2>Data from Page 3:</h2>
+                <h2>Data from Page 4:</h2>
+            `;
+        } else {
+            // Handle the case when form data from any page is missing
+            console.log('Form data not found.');
+        }
+    </script>
+</body>
+</html>

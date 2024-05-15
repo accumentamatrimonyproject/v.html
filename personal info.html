@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<link href="bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+<script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<style>
+.gradient-custom {
+/* fallback for old browsers */
+background:#f093fb;
+
+/* Chrome 10-25, Safari 5.1-6 */
+background: -webkit-linear-gradient(to bottom right, rgba(240, 147, 251, 1), rgba(245, 87, 108, 1));
+
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: linear-gradient(to bottom right, rgba(240, 147, 251, 1), rgba(245, 87, 108, 1))
+}
+
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+font-size: 1rem;
+line-height: 2.15;
+padding-left: .75em;
+padding-right: .75em;
+}
+.card-registration .select-arrow {
+top: 13px;
+}
+
+/* Add a background color on hover */
+.w3-btn:hover {
+  background-color: #3e8e41;
+}
+.w3-btn {
+  margin-bottom:10px;
+  }  
+  .button{
+    margin-top:30%;
+    float:right;
+  }   
+  .w3-btn:hover {
+  background-color: #3e8e41;
+}
+
+       
+.w3-btn {
+  margin-bottom:10px;
+  }  
+  .button{
+    margin-top: 30%;
+    float:right;
+  }
+  a {
+                  text-decoration: none;
+                  display: inline-block;
+                  padding: 8px 16px;
+                }
+                
+                a:hover {
+                  background-color: #ddd;
+                  color: black;
+                }
+                
+                .previous {
+                  background-color: #f1f1f1;
+                  color: black;
+                }
+                
+                .next {
+                  background-color: #04AA6D;
+                  color: white;
+                }                    
+</style>
+<body>
+    <section class="vh-100 gradient-custom">
+        <div class="container py-5 h-100">
+          <div class="row justify-content-center align-items-center h-100">
+            <div class="col-12 col-lg-9 col-xl-7">
+              <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                <div class="card-body p-4 p-md-5">
+                  <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Basic Personal information</h3>
+                  <form>
+      
+    <div class="row">
+        <div class="w3-container">
+            <p class="para">Marital Status</p>
+            <input type="radio" id="single" name="marital-status" value="Single">
+            <label for="single">Single</label><br>
+            <input type="radio" id="married" name="marital-status" value="Married">
+            <label for="married">Married</label><br>
+            <input type="radio" id="divorced" name="marital-status" value="Divorced">
+            <label for="divorced">Divorced</label><br>
+            <input type="radio" id="widowed" name="marital-status" value="Widowed">
+            <label for="widowed">Widowed</label><br>
+            <br>
+        </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-4 pb-2">
+                <div data-mdb-input-init class="form-outline">               
+                    <label for="feet">Feet</label> <br>
+        <select id="feet" name="feet">
+            <option value="3">3 feet</option>
+            <option value="4">4 feet</option>
+            <option value="5">5 feet</option>
+            <option value="6">6 feet</option>
+            <option value="7">7 feet</option>
+        </select>
+        <label for="inches">Inches:</label>
+        <select id="inches" name="inches">
+            <option value="0">0 inches</option>
+            <option value="1">1 inch</option>
+            <option value="2">2 inches</option>
+            <option value="3">3 inches</option>
+            <option value="4">4 inches</option>
+            <option value="5">5 inches</option>
+            <option value="6">6 inches</option>
+            <option value="7">7 inches</option>
+            <option value="8">8 inches</option>
+            <option value="9">9 inches</option>
+            <option value="10">10 inches</option>
+            <option value="11">11 inches</option>
+        </select>
+                </div>
+               
+
+              </div>
+        </div>
+        <div class="row">
+            <div class="w3-container">
+                <p>Family Status</p>
+                <input type="radio" id="low-income" name="family-background" value="Low Income">
+                <label for="low-income">Low Income</label><br>
+                <input type="radio" id="middle-income" name="family-background" value="Middle Income">
+                <label for="middle-income">Middle Income</label><br>
+                <input type="radio" id="high-income" name="family-background" value="High Income">
+                <label for="high-income">High Income</label><br>
+                <input type="radio" id="educated" name="family-background" value="Educated">
+                <label for="educated">Educated</label><br>
+                <input type="radio" id="culturally-diverse" name="family-background" value="Culturally Diverse">
+                <label for="culturally-diverse">Culturally Diverse</label><br>
+                <input type="radio" id="traditional" name="family-background" value="Traditional">
+                <label for="traditional">Traditional</label><br>
+                <!-- Add more options based on specific aspects of family background -->
+                <br>
+            </div>
+            </div>
+            
+            <div class="row">
+                <div class="w3-container">
+                    <p class="para">Family Type</p>
+                    <input type="radio" id="nuclear" name="family-type" value="Nuclear Family">
+                    <label for="nuclear">Nuclear Family</label><br>
+                    <input type="radio" id="extended" name="family-type" value="Extended Family">
+                    <label for="extended">Extended Family</label><br>
+                    <input type="radio" id="single-parent" name="family-type" value="Single-Parent Family">
+                    <label for="single-parent">Single-Parent Family</label><br>
+                    <input type="radio" id="blended" name="family-type" value="Blended Family">
+                    <label for="blended">Blended Family</label><br>
+                    <input type="radio" id="other" name="family-type" value="Other">
+                    <label for="other">Other</label><br>
+                    <br>
+                </div>
+                </div>
+                
+                <div class="row">
+                    <div class="w3-container">
+                        <p class="para">Family Values</p>
+                        <input type="checkbox" id="honesty" name="family-values" value="Honesty">
+        <label for="honesty">Honesty</label><br>
+        <input type="checkbox" id="respect" name="family-values" value="Respect">
+        <label for="respect">Respect</label><br>
+        <input type="checkbox" id="loyalty" name="family-values" value="Loyalty">
+        <label for="loyalty">Loyalty</label><br>
+        <input type="checkbox" id="responsibility" name="family-values" value="Responsibility">
+        <label for="responsibility">Responsibility</label><br>
+        <input type="checkbox" id="compassion" name="family-values" value="Compassion">
+        <label for="compassion">Compassion</label><br>
+        <br>
+                    </div>
+                    </div>
+                    <div class="row">
+                        <div class="w3-container">
+                            <p class="para">Any Disability</p>
+                            <input type="checkbox" id="physical" name="disabilities" value="Physical Disability">
+                            <label for="physical">Physical Disability</label><br>
+                            <input type="checkbox" id="visual" name="disabilities" value="Visual Impairment">
+                            <label for="visual">Visual Impairment</label><br>
+                            <input type="checkbox" id="hearing" name="disabilities" value="Hearing Impairment">
+                            <label for="hearing">Hearing Impairment</label><br>
+                            <input type="checkbox" id="intellectual" name="disabilities" value="Intellectual Disability">
+                            <label for="intellectual">Intellectual Disability</label><br>
+                            <input type="checkbox" id="mental" name="disabilities" value="Mental Health Condition">
+                            <label for="mental">Mental Health Condition</label><br>
+                            <br>
+                        </div>
+                        </div>
+                        
+                        <div class="button">
+                            <a href="details.html" class="previous">&laquo; Previous</a>
+                            <a href="Education details.html" class="next">Next &raquo;</a>
+                            
+                      </div>
+</form>
+</body>
