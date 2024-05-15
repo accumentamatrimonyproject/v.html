@@ -262,12 +262,15 @@ figure img{width:300px;}
 /* The colour of the indicators */
 
 .blog .carousel-indicators li {
-  background: #708198;
+  background: #10cea5;
   border-radius: 50%;
   width: 8px;
   height: 8px;
 }
 
+.blog .carousel-indicators .active {
+  background: #0fc9af;
+}
 
 
 
@@ -492,11 +495,34 @@ figure img{width:300px;}
 .btn.bg-blue-ui.white.read:hover {
   box-shadow: 0px 5px 15px inset #4d5f77;
 }
-
+.demo{background:linear-gradient(to right,#fcc,#d3d3d3)}
+.post-slide2{margin:0 15px;box-shadow:0 1px 2px rgba(43,59,93,.3);margin-bottom:2em}
+.post-slide2 .post-img{overflow:hidden}
+.post-slide2 .post-img img{width:100%;height:auto;transform:scale(1);transition:all 1s ease-in-out 0s}
+.post-slide2:hover .post-img img{transform:scale(1.08)}
+.post-slide2 .post-content{background:#fff;padding:20px}
+.post-slide2 .post-title{font-size:17px;font-weight:600;margin-top:0;text-transform:capitalize}
+.post-slide2 .post-title a{display:inline-block;color:grey;transition:all .3s ease 0s}
+.post-slide2 .post-title a:hover{color:#3d3030;text-decoration:none}
+.post-slide2 .post-description{font-size:15px;color:#676767;line-height:24px;margin-bottom:14px}
+.post-slide2 .post-bar{padding:0;margin-bottom:15px;list-style:none}
+.post-slide2 .post-bar li{color:#676767;padding:2px 0}
+.post-slide2 .post-bar li i{margin-right:5px}
+.post-slide2 .post-bar li a{display:inline-block;font-size:12px;color:grey;transition:all .3s ease 0s}
+.post-slide2 .post-bar li a:after{content:","}
+.post-slide2 .post-bar li a:last-child:after{content:""}
+.post-slide2 .post-bar li a:hover{color:#3d3030;text-decoration:none}
+.post-slide2 .read-more{display:inline-block;padding:10px 15px;font-size:14px;font-weight:700;color:#fff;background:#e7989a;border-bottom-right-radius:10px;text-transform:capitalize;transition:all .3s linear}
+.post-slide2 .read-more:hover{background:#333;text-decoration:none}
   </style>
 </head>
 <body>
- 
+  <div class="demo">
+    <div class="container">
+        <h3 class="h3"> </h3>    
+        <div class="row">
+            <div class="col-md-12">
+                <div id="news-slider2" class="owl-carousel">
 
 <nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="#"></a>
@@ -568,6 +594,7 @@ figure img{width:300px;}
     </form>
   </div>
 </nav>
+
 <div class="container">
   <div class="row profile">
   <div class="col-md-3">
@@ -626,10 +653,14 @@ figure img{width:300px;}
                 <div class="row blog">
                   <div class="col-md-12">
                     <div id="blogCarousel" class="carousel slide container-blog" data-ride="carousel">
-                      
+                      <ol class="carousel-indicators">
+                        <li data-target="#blogCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#blogCarousel" data-slide-to="1"></li>
+                      </ol>
                       <!-- Carousel items -->
                       <div class="carousel-inner">
                         <div class="carousel-item active">
+                          
                           <div class="row">
                             <div class="col-md-4" >
                               <div class="item-box-blog">
@@ -669,7 +700,7 @@ figure img{width:300px;}
                                 </div>
                                 <div class="item-box-blog-body">
                                   <!--Heading-->
-                                  <!-- <div class="item-box-blog-heading">
+                                 <div class="item-box-blog-heading">
                                     <a href="#" tabindex="0">
                                       <h5>Name</h5>
                                     </a>
@@ -813,21 +844,156 @@ figure img{width:300px;}
                       <!--.carousel-inner-->
                     </div>
                     <!--.Carousel-->
-                  </div>-->
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="d-flex justify-content-end">
+         
+
+          <div class="d-flex justify-content-end">
               <a href="details1.html" class="btn btn-previous">&laquo; Previous</a>
               <button type="button" id="btnNext">Next &raquo;</button>
-          </div>
-  </div>
-</div>
-</div>
+          </div> 
+       <script>
+       $(document).ready(function() {
+        $("#news-slider").owlCarousel({
+            items : 2,
+            itemsDesktop : [1199,2],
+            itemsMobile : [600,1],
+            pagination :true,
+            autoPlay : true
+        });
+        
+        $("#news-slider2").owlCarousel({
+            items:3,
+            itemsDesktop:[1199,2],
+            itemsDesktopSmall:[980,2],
+            itemsMobile:[600,1],
+            pagination:false,
+            navigationText:false,
+            autoPlay:true
+        });
+        
+        $("#news-slider3").owlCarousel({
+            items:3,
+            itemsDesktop:[1199,2],
+            itemsDesktopSmall:[1000,2],
+            itemsMobile:[700,1],
+            pagination:false,
+            navigationText:false,
+            autoPlay:true
+        });
+        
+        $("#news-slider4").owlCarousel({
+            items:3,
+            itemsDesktop:[1199,3],
+            itemsDesktopSmall:[1000,2],
+            itemsMobile:[600,1],
+            pagination:false,
+            navigationText:false,
+            autoPlay:true
+        });
+        
+        $("#news-slider5").owlCarousel({
+            items:3,
+            itemsDesktop:[1199,3],
+            itemsDesktopSmall:[1000,2],
+            itemsMobile:[650,1],
+            pagination:false,
+            navigationText:false,
+            autoPlay:true
+        });
+        
+        $("#news-slider6").owlCarousel({
+            items : 3,
+            itemsDesktop:[1199,3],
+            itemsDesktopSmall:[980,2],
+            itemsMobile : [600,1],
+            pagination:false,
+            navigationText:false
+        });
+        
+        $("#news-slider7").owlCarousel({
+            items : 3,
+            itemsDesktop : [1199,3],
+            itemsDesktopSmall : [1000,2],
+            itemsMobile : [650,1],
+            pagination :false,
+            autoPlay : true
+        });
+        
+        $("#news-slider8").owlCarousel({
+            items : 3,
+            itemsDesktop:[1199,3],
+            itemsDesktopSmall:[980,2],
+            itemsMobile : [600,1],
+            autoPlay:true
+        });
+        
+        $("#news-slider9").owlCarousel({
+            items : 3,
+            itemsDesktop:[1199,2],
+            itemsDesktopSmall:[980,2],
+            itemsTablet:[650,1],
+            pagination:false,
+            navigation:true,
+            navigationText:["",""]
+        });
+        
+        $("#news-slider10").owlCarousel({
+            items : 4,
+            itemsDesktop:[1199,3],
+            itemsDesktopSmall:[980,2],
+            itemsMobile : [600,1],
+            navigation:true,
+            navigationText:["",""],
+            pagination:true,
+            autoPlay:true
+        });
+        
+        $("#news-slider11").owlCarousel({
+            items : 4,
+            itemsDesktop:[1199,3],
+            itemsDesktopSmall:[980,2],
+            itemsMobile : [600,1],
+            pagination:true,
+            autoPlay:true
+        });
+        
+        $("#news-slider12").owlCarousel({
+            items : 2,
+            itemsDesktop:[1199,2],
+            itemsDesktopSmall:[980,1],
+            itemsTablet: [600,1],
+            itemsMobile : [550,1],
+            pagination:true,
+            autoPlay:true
+        });
+        
+        $("#news-slider13").owlCarousel({
+            navigation : false,
+            pagination : true,
+            items : 3,
+            itemsDesktop:[1199,3],
+            itemsDesktopSmall:[980,2],
+            itemsMobile : [600,1],
+            navigationText : ["",""]
+        });
+        
+        $("#news-slider14").owlCarousel({
+            items : 4,
+            itemsDesktop:[1199,3],
+            itemsDesktopSmall:[980,2],
+            itemsMobile : [550,1],
+            pagination:false,
+            autoPlay:true
+        });
+    });
+    
+    
+    
+    </script> 
 
-<center>
-<strong>Powered by <a href="http://j.mp/metronictheme" target="_blank">KeenThemes</a></strong>
-</center>
 <br>
 <br>
 </body>
